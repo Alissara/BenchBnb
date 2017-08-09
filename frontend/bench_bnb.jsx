@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
+import { fetchBenches } from './actions/bench_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchBenches = fetchBenches;
   //testing
 
 
